@@ -1,0 +1,569 @@
+/* Carregar a fonte Montserrat do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
+
+/* Definir Montserrat como a fonte principal para o site */
+body {
+    overflow-x: hidden !important;
+  font-family: 'Montserrat', sans-serif !important;
+}
+/* Definindo cores como variáveis */
+:root {
+    --primary-font-color: #333333; /* Cor padrão para o texto */
+    --secondary-font-color: #555555; /* Cor para textos secundários */
+    --accent-font-color: #FF5733; /* Cor para destaque */
+  }
+  
+  /* Aplicar cores nas fontes do site */
+  body {
+    color: var(--primary-font-color);
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    color: var(--accent-font-color); /* Usando a cor de destaque para títulos */
+  }
+  
+  p {
+    color: var(--secondary-font-color); /* Cor para parágrafos */
+  }
+  .primeira-div {
+    position: relative;
+    height: 100vh;
+    margin-top: 0px;
+    width: 100%;
+}
+.div-continua {
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+  width: 100%;
+  background: #e9e9e9;
+  padding: 10px 0;
+}
+.div-continua-container {
+  display: flex;
+  gap: 20px;
+  animation: scroll-left 85s linear infinite;
+}
+.div-continua img{
+  width: 150px;
+}
+.div-continua-item {
+  min-width: 200px;
+  height: 70px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+}
+@keyframes scroll-left {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.div-continua-container {
+  display: flex;
+  width: max-content;
+  animation: scroll-left 85s linear infinite;
+}
+.video-div{
+  width: 100%;
+  
+  padding: 100px;
+}
+.video-div video{
+  width: 100%;
+  height: 100%;
+}.video-div video:hover{
+  cursor: pointer;
+}
+.video-div-titulo{
+  display: flex;
+  justify-content: center;
+  text-align: left;
+  padding: 50px 10px;
+  
+}.play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 40px; /* Tamanho do ícone */
+  background: rgba(0, 0, 0, 0.5); /* Fundo semitransparente para o botão */
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 1;
+  display: none; /* Ocultar o botão enquanto o vídeo não está pausado */
+}
+
+video:paused + .play-button {
+  display: block; /* Exibir o botão de play apenas quando o vídeo estiver pausado */
+}
+.video-div-titulo h2 {
+  font-weight: 700;
+  color: #555;
+  font-size: 1.5rem;
+}
+.video-div hr {
+  width: 20%;
+  opacity: 1;
+  border-radius: 20px;
+  border-top: 3px solid #17d4ff;
+}
+.video-div #hr {
+  width: 100%;
+  opacity: 1;
+  border-radius: 0px;
+  border-top: 3px solid #555;
+}
+  /* Estilo para o vídeo de background */
+  .primeira-div-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+  }
+
+  /* Estilo para o texto */
+  .primeira-div-texto {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    padding-left: 250px;
+    transform: translateY(-50%);
+    z-index: 1;
+    color: white;
+  }
+  .primeira-div-texto img{
+    width: 70px;
+  }
+
+  .primeira-div-texto h1 {
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+  .primeira-div-texto h3 {
+    font-size: 1.9rem;
+  }
+
+  .primeira-div-texto hr {
+    width: 20%;
+    opacity: 1;
+    border-radius: 20px;
+    border-top: 3px solid #17d4ff;
+}
+  .primeira-div-texto .texto-interativo {
+    font-size: 5rem;
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-block;
+  }
+
+  /* Adiciona o cursor piscando */
+  .primeira-div-texto .texto-interativo::after {
+    content: "_";
+    animation: blink-caret 0.75s step-end infinite;
+  }
+
+  /* Animação do cursor de digitação */
+  @keyframes blink-caret {
+    50% {
+      opacity: 0;
+    }
+  }
+
+  /* Estilo para o ícone da seta */
+  .primeira-div-icone {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    z-index: 2;
+  }
+
+  /* Estilo para os ícones das redes sociais */
+  .primeira-div-icones {
+    position: absolute;
+    top: 30%;
+    right: 20%;
+    gap: 30px;
+    z-index: 2;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .primeira-div-icones span {
+    writing-mode: vertical-rl;
+    text-decoration: none;
+    margin: 5px 0;
+    color:#555;
+    transition: 0.2s;
+  }
+  .primeira-div-icones #instagram:hover{
+    color: #17d4ff;
+    cursor: pointer;
+    transition: 0.2s;
+  }
+  .primeira-div-icones #linkedin:hover{
+    color: #e83dff;
+    cursor: pointer;
+    transition: 0.2s;
+  }
+  .primeira-div-icones #facebook:hover{
+    color: #ff8d22;
+    cursor: pointer;
+    transition: 0.2s;
+  }
+  .primeira-div-icone h2{
+    font-weight: 900;
+    color: #fff;
+  }
+  .primeira-div-icone h3{
+   
+    color: #555;
+  }
+  .cases-div {
+    margin-top: -150px;
+    padding: 100px;
+}
+.contato-rapido-div {
+  background-color: #0b111e;
+  padding: 100px;
+}
+
+.contato-rapido-div-branca {
+  background-color: #17d4ff;
+  border-radius: 50px;
+  padding: 100px;
+  color: #fff;
+  align-items: center;
+  display: flex
+;
+  justify-content: center;
+}
+.contato-rapido-div-esquerda {
+  width: 45%;
+  margin-right: 100px;
+}
+
+.contato-rapido-div-esquerda h2 {
+  margin: 0;
+  font-weight: 900;
+}.contato-rapido-div-esquerda p {
+  margin: 0;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+.contato-rapido-div-esquerda hr {
+  width: 20%;
+  border: 1px solid #ffffff;
+}
+.contato-rapido-div-direita input, .contato-rapido-div-direita textarea {
+  padding: 10px;
+  margin-bottom: 15px;
+  width: 100%;
+  background-color: #ffffff00;
+  border: none;
+  color: #fff;
+  border-radius: px;
+  outline: none; /* Garante que nenhum contorno apareça */
+  box-shadow: none; /* Evita sombras extras */
+  border-bottom: 2px solid #ffffff;
+}.contato-rapido-div-direita input {
+  padding: 10px;
+  margin-bottom: 15px;
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid #ffffff;
+  outline: none; /* Remove o contorno padrão */
+  box-shadow: none; /* Remove qualquer sombra que possa ser aplicada */
+  transition: border-bottom 0.3s ease-in-out;
+}
+.contato-rapido-div-direita input::placeholder {
+ color: #fff;
+}
+.contato-rapido-div-direita textarea::placeholder {
+  color: #fff;
+ }
+
+.contato-rapido-div-direita input:focus {
+  border-bottom: 2px solid #ffffff; /* Aumenta a borda inferior e muda para branco */
+  outline: none; /* Garante que nenhum contorno apareça */
+  box-shadow: none; /* Evita sombras extras */
+}
+
+
+.contato-rapido-div-esquerda .icone {
+  font-size: 24px; /* Altere o tamanho do ícone conforme necessário */
+}
+
+.contato-rapido-div-direita {
+  width: 45%;
+}
+
+.contato-rapido-div-direita form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contato-rapido-div-direita label {
+  margin-bottom: 5px;
+}
+
+
+
+.contato-rapido-div-direita button {
+  padding: 10px 20px;
+  background-color: #000000;
+  color: white;
+  border: none;
+  width: 30%;
+  border-radius: 5px;
+  transition: 0.2s;
+  cursor: pointer;
+}
+.contato-rapido-div-direita button:hover {
+  background-color: rgb(255, 255, 255);
+  color: #000000;
+  transition: 0.2s;
+}
+  .cases-div-title h2 {
+    text-align: left;
+    margin-bottom: 50px;
+  }
+  .cases-div-title span {
+   color: #17d4ff;
+  }
+  
+  .cases-div-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 70px; gap: 20px;
+  }
+  
+  .cases-div-item {
+    width: 30%;
+    text-align: left;
+   
+  }
+  .cases-div-item h3{
+    font-weight: 700;  color: #555;
+  }
+  
+  .cases-div-item img {
+    height: 500px;
+    width: 100%;
+    border-radius: 5px;
+    object-fit: cover;
+  }
+  .cases-div-item img {
+    transition: filter 0.3s ease; /* Adiciona transição suave */
+  }
+  
+  .cases-div-item img:hover {
+    cursor: pointer;
+    filter: brightness(0.7); /* Torna a imagem 30% mais escura */
+  }
+  
+  
+  .cases-div-item h3 {
+    font-size: 18px;
+    margin-top: 10px;
+  }
+  .cases-div-title h2{
+    font-weight: 700;
+  }
+  .cases-div-item button {
+    margin-top: 10px;
+    border-radius: 5px;
+    padding: 10px 20px;
+    background-color: #17d4ff;
+    color: white;
+    border: none;
+    font-weight: 700;
+    transition: 0.2s;
+    cursor: pointer;
+  }
+  
+  .cases-div-item button:hover {
+    transition: 0.2s;
+    background-color: #000000;
+  }
+
+  
+  
+  @media (max-width: 1200px) {
+    .navbar-class-container {
+        display: none;
+    }
+    .primeira-div-texto h3 {
+      font-size: 1.2rem;
+  }
+    .primeira-div-icones {
+      position: absolute;
+      top: 30%;
+      right: 12%;
+      gap: 30px;
+      z-index: 2;
+      text-transform: uppercase;
+      display: flex
+  ;
+      flex-direction: column;
+      align-items: center;
+  }
+  .primeira-div-icones span {
+    writing-mode: vertical-rl;
+    text-decoration: none;
+    margin: 5px 0;
+    color: #555;
+    transition: 0.2s;
+    font-size: 12px;
+}
+  
+    .primeira-div-texto {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: 240px;
+      padding-left: 10%;
+      transform: translateY(-50%);
+      z-index: 1;
+      color: white;
+  }
+  .primeira-div-texto h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+.navbar-class-mobile button {
+  background: none;
+  color: #fff;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+.navbar-class-mobile-menu {
+  position: fixed;
+  top: 0;
+  right: -250px;
+  text-align: left;
+  width: 250px;
+  padding-left: 50px;
+  height: 100vh;
+  background: white;
+  transition: right 0.3s;
+  display: flex
+;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-top: 50px;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+}
+.primeira-div-texto .texto-interativo {
+  font-size: 1.5rem;
+  white-space: nowrap;
+  overflow: hidden;
+  display: inline-block;
+}  .div-continua-item {
+  min-width: 80px;
+  height: 40px;
+  background: #fff;
+  display: flex
+;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+}
+.div-continua img {
+  width: 50px;
+}
+.cases-div-item {
+  width: 100%;
+  text-align: left;
+}
+.cases-div-item img {
+  height: 200px;
+  width: 100%;
+  border-radius: 5px;
+  object-fit: cover;
+}
+.video-div {
+  width: 100%;
+ 
+  padding: 40px;
+}
+.video-div-titulo h2 {
+  font-weight: 700;
+  color: #555;
+  font-size: 1rem;
+}
+.cases-div {
+  margin-top: -50px;
+  padding: 40px;
+}
+.cases-div-content {
+  display: grid
+;
+  flex-wrap: wrap;
+  gap: 70px;
+  gap: 20px;
+}
+.contato-rapido-div {
+  background-color: #0b111e;
+  padding: 40px;
+}
+.contato-rapido-div-branca {
+  background-color: #17d4ff;
+  border-radius: 50px;
+  padding: 40px;
+  color: #fff;
+  align-items: center;
+ display: grid;
+  justify-content: center;
+}
+.contato-rapido-div-esquerda {
+  width: 100%;
+  margin-right: 0px;
+}
+.contato-rapido-div-esquerda p {
+  margin: 0;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.0rem;
+}
+.contato-rapido-div-direita {
+  width: 100%;
+}
+.contato-rapido-div-direita button {
+  padding: 10px 20px;
+  background-color: #000000;
+  color: white;
+  border: none;
+  width: 100%;
+  border-radius: 5px;
+  transition: 0.2s;
+  cursor: pointer;
+}
+.contato-rapido-div-direita textarea {
+  padding: 10px;
+  margin-bottom: 15px;
+  width: 100%;
+  background-color: #ffffff00;
+  border: none;
+  color: #fff;
+  height: 150px;
+  border-radius: px;
+  outline: none;
+  box-shadow: none;
+  border-bottom: 2px solid #ffffff;
+}
+}
