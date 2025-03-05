@@ -6,13 +6,112 @@ body {
     overflow-x: hidden !important;
   font-family: 'Montserrat', sans-serif !important;
 }
-/* Definindo cores como variáveis */
-:root {
-    --primary-font-color: #333333; /* Cor padrão para o texto */
-    --secondary-font-color: #555555; /* Cor para textos secundários */
-    --accent-font-color: #FF5733; /* Cor para destaque */
-  }
+::selection {
+  background-color: #17d4ff;
+  color: black;
+}
+
+/* Customizando a barra de rolagem para navegadores Webkit (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+  width: 8px; /* Largura da barra de rolagem */
+}
+
+::-webkit-scrollbar-track {
+  background: #f0f0f0; /* Cor do fundo da barra de rolagem */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #111111; /* Cor do "polegar" da barra de rolagem */
+  border-radius: 0px; /* Deixa os cantos arredondados */
+}
+.video-div-video {
+  cursor: none; /* Esconde o cursor padrão enquanto estiver no hover */
   
+}
+
+#customCursor {
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  border: 3px solid #17d4ff;
+  background-color: #000000ab;
+  color: white;
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%; /* Deixa redondo */
+  pointer-events: none; /* Não interfere na interação */
+  display: none; /* Escondido por padrão */
+  transition: transform 0.1s ease-out, opacity 0.2s ease-out;
+}
+
+.video-div-video:hover ~ #customCursor {
+  display: block; /* Só aparece no hover */
+}
+
+.avaliacoes{
+  justify-content:center ;
+  align-items: center;
+  
+  padding: 100px;
+  color: #212529;
+  background-color: #ffffff;
+  text-align: center;
+  border-bottom: 6px solid #17d4ff;
+}
+.avaliacoes-div{
+  cursor: pointer;
+  justify-content: center;
+  display: flex;
+}
+.avaliacoes-div img {
+  width: 700px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  cursor: pointer;
+}
+
+.avaliacoes-div img:hover {
+  filter: brightness(0.7);
+  transform: scale(1.1);
+}
+
+.cs-fullscreen-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  z-index: 1000;
+}
+
+.cs-fullscreen-image {
+  max-width: 90%;
+  max-height: 90%;
+  transform: scale(0.8);
+  transition: transform 0.3s ease;
+}
+
+.cs-fullscreen-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.cs-fullscreen-overlay.active .cs-fullscreen-image {
+  transform: scale(1);
+}
+
+.avaliacoes h2{
+  font-weight: 900;
+}
+
   /* Aplicar cores nas fontes do site */
   body {
     color: var(--primary-font-color);
@@ -73,8 +172,6 @@ body {
 .video-div video{
   width: 100%;
   height: 100%;
-}.video-div video:hover{
-  cursor: pointer;
 }
 .video-div-titulo{
   display: flex;
@@ -111,6 +208,11 @@ video:paused + .play-button {
   opacity: 1;
   border-radius: 20px;
   border-top: 3px solid #17d4ff;
+}#hr {
+  width: 100%;
+  opacity: 1;
+  border-radius: 0px;
+  border-top: 3px solid #555;
 }
 .video-div #hr {
   width: 100%;
@@ -203,7 +305,7 @@ video:paused + .play-button {
     writing-mode: vertical-rl;
     text-decoration: none;
     margin: 5px 0;
-    color:#555;
+    color:#ffffff;
     transition: 0.2s;
   }
   .primeira-div-icones #instagram:hover{
@@ -225,10 +327,9 @@ video:paused + .play-button {
     font-weight: 900;
     color: #fff;
   }
-  .primeira-div-icone h3{
-   
-    color: #555;
-  }
+  .primeira-div-icone h3 {
+    color: #ffffff;
+}
   .cases-div {
     margin-top: -150px;
     padding: 100px;
@@ -255,6 +356,7 @@ video:paused + .play-button {
 
 .contato-rapido-div-esquerda h2 {
   margin: 0;
+  font-size: 45px;
   font-weight: 900;
 }.contato-rapido-div-esquerda p {
   margin: 0;
@@ -328,7 +430,7 @@ video:paused + .play-button {
   color: white;
   border: none;
   width: 30%;
-  border-radius: 5px;
+  border-radius: 50px;
   transition: 0.2s;
   cursor: pointer;
 }
@@ -346,10 +448,13 @@ video:paused + .play-button {
   }
   
   .cases-div-content {
-    display: flex;
+    display: flex
+;
     flex-wrap: wrap;
-    gap: 70px; gap: 20px;
-  }
+    gap: 80px;
+    justify-content: center;
+   
+}
   
   .cases-div-item {
     width: 30%;
@@ -383,14 +488,49 @@ video:paused + .play-button {
   .cases-div-title h2{
     font-weight: 700;
   }
+  .social-section{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    gap: 30px;
+    cursor: pointer;
+  }
+  .social-section i{
+    text-decoration: none;
+    color: #f0f0f0;
+    margin-right: 20px;
+    transition: 0.2s;
+  }
+  .social-section i:hover{
+    color: #17d4ff;
+    transition: 0.2s;
+  }
+  .section .btn-section {
+    margin-top: 10px;
+    border-radius: 50px;
+    padding: 10px 20px;
+    border: 2px solid #000000;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+   
+    font-weight: 700;
+    transition: 0.2s;
+    cursor: pointer;
+  }
+  .section button:hover {
+    transition: 0.2s;
+    border: 2px solid #17d4ff;
+    color: #fff;
+    background-color: #000000;
+  }
   .cases-div-item button {
     margin-top: 10px;
-    border-radius: 5px;
+    border-radius: 50px;
     padding: 10px 20px;
     background-color: #17d4ff;
     color: white;
     border: none;
     font-weight: 700;
+    width: 150px;
     transition: 0.2s;
     cursor: pointer;
   }
@@ -399,9 +539,325 @@ video:paused + .play-button {
     transition: 0.2s;
     background-color: #000000;
   }
+/* Estilo do botão de rolar para cima */
+.up-div {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  border-radius: 5px;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.footer-text{
+  width: 30%;
+}
+/* Efeito de entrada */
+.up-div.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
 
+/* Efeito de saída com animação mais fluida */
+.up-div.hide {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+/* Efeito hover */
+.up-div:hover {
+  background-color: rgba(0, 0, 0, 0.9);
+}
+.contato-rapido-div-esquerda i{
+  font-size: 55px;
+  transition: 0.2s;
+  color: #ffffff;
+}
+.contato-rapido-div-esquerda i:hover{
+  font-size: 55px;
+  transition: 0.2s;
+  color: #272727;
+  transform: scale(1.1);
+}
   
+  /* Estilos gerais do footer */
+  .footer {
+    background-color: #ffffff;
+    color: #212529;
+    padding: 40px 20px;
+}
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.footer-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
+  align-items: self-start;
+}
+.footer-logo-img {
+  width: 100px;
+  margin-bottom: 15px;
+}
+.footer-social i{
+  color: #17d4ff;
+  transition: 0.2s; 
+  font-size: 20px;
+}
+.footer-social i:hover{
+  color: #0f4753;
+  font-size: 20px;
+  transition: 0.2s;
+}
+.footer-social a {
+  margin: 0 5px;
+}
+.footer-solutions li a{
+  font-size: 13px !important;
+}
+.footer-ggdigital li a{
+  font-size: 13px !important;
+}
+.footer-social img {
+  width: 24px;
+  transition: opacity 0.3s;
+}
+
+.footer-social img:hover {
+  opacity: 0.7;
+}
+
+/* Segunda div (Imagem quadrangular) */
+.footer-image img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+}
+
+/* Terceira div (Título e Parágrafo) */
+.footer-text h2 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.footer-text p {
+  color: #555;
+}
+
+/* Quarta e quinta div (Soluções e GGDigital) */
+.footer-solutions, .footer-ggdigital {
+  max-width: 200px;
+}
+
+.footer-solutions h2, .footer-ggdigital h2 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.footer-solutions ul, .footer-ggdigital ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-solutions li, .footer-ggdigital li {
+  margin-bottom: 5px;
+}
+
+.footer-solutions a, .footer-ggdigital a {
+  color: #555;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-solutions a:hover, .footer-ggdigital a:hover {
+  color: #17d4ff;
+}
+.whatsapp-btn {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  background-color: #25d366;
+  color: white;
+  padding: 15px 20px;
+  border-radius: 50px;
+  z-index: 9999;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s;
+}
+.whatsapp-icon {
+  width: 24px;
+  height: 24px;
+}
+@keyframes whatsapp-shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-2px); }
+  50% { transform: translateX(2px); }
+  75% { transform: translateX(-2px); }
+  100% { transform: translateX(0); }
+}
+.whatsapp-btn:hover {
+  animation: whatsapp-shake 0.5s;
+} .container1 {
+  width: 100%;
+  height: 300vh; /* Permite o scroll necessário */
   
+  position: relative;
+}
+
+.section {
+  width: 100%;
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container1 h3{
+  font-weight: 900;
+  font-size: 3rem;
+}
+.container1 .text{
+  margin-left: 10%;
+}
+.azul {
+  color: #fff;
+  background: #000000;
+ 
+}
+
+.verde {
+  color: #fff;
+  background: #0b111e;
+ 
+}
+
+.vermelho {
+  color: #fff;
+  background: #000000;
+  z-index: 1;
+}
+
+  .slider-container {
+    width: 100%;
+    overflow: hidden;
+     }
+  
+.slider {
+  display: flex;
+  width: 300%;
+  transition: transform 0.4s ease-in-out;
+}
+
+.slide {
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  flex-shrink: 0;
+}
+
+
+#customCursor1 {
+  position: fixed; /* Para seguir o mouse corretamente */
+  width: 80px;
+  height: 80px;
+  background-color: black;
+  border-radius: 50%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 30px;
+  pointer-events: none;
+  transition: transform 0.1s ease-out, opacity 0.2s;
+  z-index: 9999; /* Para ficar acima de outros elementos */
+}
+
+#customCursor1 i {
+  font-size: 32px;
+}
+
+.slider-container {
+  width: 100%;
+  overflow: hidden;
+}
+
+.slider-container:hover {
+  cursor: none; /* Oculta o cursor padrão */
+}
+
+
+
+
+.slide .texto {
+  width: 50%;
+  margin-left: 10%;
+  margin-right: 10%;
+  padding: 20px;
+}
+
+.slide .imagem {
+  width: 100%;
+  height: 940px;
+  display: flex;
+  justify-content: center;
+}
+.slide .imagem video {
+  margin-top: -10px;
+  width: 100%;
+ height: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+.slide .imagem img {
+  margin-top: -10px;
+  width: 100%;
+ height: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+@media (max-width: 1200px) {
+  .footer-container {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+  }
+
+  .footer-solutions, .footer-ggdigital {
+      margin-top: 20px;
+  }
+}
+
   @media (max-width: 1200px) {
     .navbar-class-container {
         display: none;

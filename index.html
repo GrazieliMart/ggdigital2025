@@ -28,6 +28,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
       
     </style>
@@ -48,6 +49,8 @@
                     <a href="#" >Sobre</a>
                     <a href="#" class="dropdown-trigger" id="solucoes-trigger">Soluções  <i class="bi bi-chevron-down"></i></a>
                     <a href="#" class="dropdown-trigger" id="cases-trigger">Cases</a>
+                    <a href="#" class="dropdown-trigger" id="cases-trigger">Portifólio</a>
+                    <a href="#" class="dropdown-trigger" id="cases-trigger1">Sites Irlandeses</a>
                 </div>
                 
                 <div class="dropdown-menu" id="solucoes-menu">
@@ -89,7 +92,7 @@
                         <div class="dropdown-item">
                             <img src="assets/navbar-drop (6).png" alt="Icon">
                             <div>
-                                <h2>Film Maker</h2>
+                                <h2>Filmmaker</h2>
                                 <p>Tenha uma gravação profissional <br> do seu negócio.</p>
                             </div>
                         </div>
@@ -98,7 +101,23 @@
                     
                 </div>
                 
-             
+             <script>let lastScrollTop = 0; // Para controlar a direção da rolagem
+                const navbar = document.querySelector('.navbar-class');
+                
+                window.addEventListener('scroll', function() {
+                  let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+                
+                  // Se estiver rolando para baixo
+                  if (currentScroll > lastScrollTop) {
+                    navbar.classList.add('navbar-hidden'); // Esconde a navbar
+                  } else {
+                    navbar.classList.remove('navbar-hidden'); // Mostra a navbar
+                  }
+                
+                  // Atualiza a posição do scroll
+                  lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // Evita valores negativos
+                });
+                </script>
                 
                 <script>
  document.querySelectorAll('.dropdown-trigger').forEach(trigger => {
@@ -177,8 +196,7 @@ document.querySelectorAll('.dropdown-content').forEach(content => {
             <div class="navbar-class-mobile">
                 <img src="assets/logo-branca-gg.png" alt="">
                 <button id="menuButton" onclick="toggleMobileMenu()">
-                    <i class="bi bi-three-dots"></i>
-                </button>
+                    <i class="bi bi-three-dots"></i>            </button>
             </div>
             <div class="navbar-class-mobile-menu" id="mobileMenu">
                 <a href="#">sobre</a>
@@ -271,12 +289,42 @@ document.querySelectorAll('.dropdown-content').forEach(content => {
                 <div class="video-div-titulo">
                     <h2>GGDIGITAL I Marketing Especializado</h2>
                 </div>
+                <div id="customCursor">▶</div>
+                
+
                     <div class="video-div-video">
                         <video src="assets/videobanner2.webm" controls></video>
                         <button class="play-button" onclick="this.previousElementSibling.play()">
                             &#9658; <!-- Símbolo de play -->
                         </button>
-                    </div>
+                    </div><script>const videoElement = document.querySelector(".video-div-video");
+                        const cursor = document.getElementById("customCursor");
+                        
+                        videoElement.addEventListener("mouseenter", () => {
+                          cursor.style.display = "flex"; // Mostra o cursor
+                        });
+                        
+                        videoElement.addEventListener("mouseleave", () => {
+                          cursor.style.display = "none"; // Esconde ao sair
+                        });
+                        
+                        videoElement.addEventListener("mousemove", (e) => {
+                          cursor.style.left = e.pageX - 40 + "px"; // Centraliza
+                          cursor.style.top = e.pageY - 40 + "px";
+                        });
+                        
+                        // Efeito de pop e sumir ao clicar
+                        videoElement.addEventListener("click", () => {
+                          cursor.style.transform = "scale(1.5)"; // Aumenta para efeito de pop
+                          cursor.style.opacity = "0"; // Some suavemente
+                          setTimeout(() => {
+                            cursor.style.display = "none"; // Some completamente
+                            videoElement.style.cursor = "default"; // Volta o cursor normal
+                          }, 200);
+                        });
+                        
+                        
+    </script>
               
                 
                 <div class="video-div-titulo">
@@ -285,29 +333,240 @@ document.querySelectorAll('.dropdown-content').forEach(content => {
                         Criamos sites, desenvolvemos suas redes sociais, criamos anúncios online e outras soluções para marcas de todos os tamanhos.</h2>
                        
                 </div> 
-                <hr id="hr">
+                
             </div>
 
-            <!--Quarta Div-->
+         
+              <!--Quinta Div-->
+         
+      
+             <div class="container1">
+    <div class="section azul">
+        <div class="slider-container" id="sliderContainer1">
+            <div class="slider" id="slider1">
+                <div class="slide">
+                    <div class="texto">
+                       
+                        <i class="bi bi-arrow-down-right" style="font-size: 2rem; color: white;"></i>
+                        <h3>Anúncios online</h3>
+                        <p>Aumentamos seu alcance e escalamos as vendas com Meta Ads, Pinterest Ads, Google Analytics e TikTok Ads, garantindo mais notoriedade e resultados por investimento.</p>
+                        <div class="social-section">
+                            <a href="https://www.google.com">
+                                <i class="bi bi-google"></i></a>
+                              <a href="https://www.meta.com">
+                                <i class="bi bi-meta"></i></a>
+                              <a href="https://www.tiktok.com"><i class="bi bi-tiktok"></i></a>
+                              <a href="https://www.pinterest.com">
+                                <i class="bi bi-pinterest"></i></a>
+                              <a href="https://www.linkedin.com">
+                                <i class="bi bi-linkedin"></i></a>
+                              
+                        </div>
+                        <button class="btn-section"> <i class="bi bi-arrow-right-circle" style="color: #17d4ff;"></i> Conhecer Serviço</button>
+                    </div>
+                    <div class="imagem"><video src="assets/section (2).mp4" loop muted autoplay></video></div>
+                </div>
+                <div class="slide">
+                    <div class="texto">
+                       
+                        <i class="bi bi-arrow-down-right" style="font-size: 2rem; color: white;"></i>
+                        <h3>Meta Ads</h3>
+                        <p>Escale suas vendas com links patrocinados, segmentação de público e aumente a visibilidade e interatividade do seu site e aplicativo.</p>
+                       
+                        <button class="btn-section"> <i class="bi bi-arrow-right-circle" style="color: #17d4ff;"></i> Conhecer Meta Ads</button>
+                    </div>
+                    <div class="imagem"><img src="assets/cases (2).png"></div>
+                </div>
+                <div class="slide">
+                    <div class="texto">
+                       
+                        <i class="bi bi-arrow-down-right" style="font-size: 2rem; color: white;"></i>
+                        <h3>Google Ads</h3>
+                        <p>Seja a primeira resposta na busca do seu cliente com gestão de Google Ads e SEO para aumentar a visibilidade e conversão do seu site.</p>     
+                        <button class="btn-section"> <i class="bi bi-arrow-right-circle" style="color: #17d4ff;"></i> Conhecer Google Ads</button>
+                    </div>
+                    <div class="imagem"><img src="assets/cases (3).png"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section verde">
+        <div class="slider-container" id="sliderContainer2">
+            <div class="slider" id="slider2">
+                <div class="slide">
+                    <div class="texto">
+                       
+                        <i class="bi bi-arrow-down-right" style="font-size: 2rem; color: white;"></i>
+                        <h3>Gestão de Mídias</h3>
+                        <p>Gerenciamos suas mídias sociais com campanhas eficazes para maximizar a visibilidade e o engajamento.</p>
+                       
+                        <button class="btn-section"> <i class="bi bi-arrow-right-circle" style="color: #17d4ff;"></i> Conhecer Gestão de Mídias</button>
+                    </div>
+                    <div class="imagem"><img src="assets/cases (4).png"></div>
+                </div>
+                <div class="slide">
+                    <div class="texto">
+                       
+                        <i class="bi bi-arrow-down-right" style="font-size: 2rem; color: white;"></i>
+                        <h3>Design por Assinatura</h3>
+                        <p>Oferecemos design contínuo e personalizado, garantindo consistência e inovação para sua marca.</p>
+                       
+                        <button class="btn-section"> <i class="bi bi-arrow-right-circle" style="color: #17d4ff;"></i> Contratar Design por Assinatura</button>
+                    </div>
+                    <div class="imagem"><img src="assets/cases (5).png"></div>
+                </div>
+                <div class="slide">
+                    <div class="texto">
+                       
+                        <i class="bi bi-arrow-down-right" style="font-size: 2rem; color: white;"></i>
+                        <h3>Filmmaker</h3>
+                        <p>Precisa de filmagens profissionais para a sua empresa? Entre em contato com a gente e vamos criar conteúdos marcantes com profissionais do audiovisual.</p>
+                       
+                        <button class="btn-section"> <i class="bi bi-arrow-right-circle" style="color: #17d4ff;"></i> Conhecer trabalhos de Filmmaker</button>
+                    </div>
+                    <div class="imagem"><img src="assets/cases (6).png"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section vermelho">
+        <div class="slider-container" id="sliderContainer3">
+            <div class="slider" id="slider3">
+                <div class="slide">
+                    <div class="texto">
+                       
+                        <i class="bi bi-arrow-down-right" style="font-size: 2rem; color: white;"></i>
+                        <h3>Branding</h3>
+                        <p>Oferecemos estratégias de branding que fortalecem sua marca e a conectam de forma impactante com o público.</p>
+                       
+                        <button class="btn-section"> <i class="bi bi-arrow-right-circle" style="color: #17d4ff;"></i> Ver mais sobre Branding</button>
+                    </div>
+                    <div class="imagem"><img src="assets/cases (7).png"></div>
+                </div>
+                <div class="slide">
+                    <div class="texto">
+                       
+                        <i class="bi bi-arrow-down-right" style="font-size: 2rem; color: white;"></i>
+                        <h3>Desenvolvimento de Logo</h3>
+                        <p>Desenvolvemos logos únicos que refletem a essência da sua empresa e garantem uma presença marcante.</p>
+                       
+                        <button class="btn-section"> <i class="bi bi-arrow-right-circle" style="color: #17d4ff;"></i>  Ver mais sobre logos</button>
+                    </div>
+                    <div class="imagem"><img src="assets/cases (8).png"></div>
+                </div>
+                <div class="slide">
+                    <div class="texto">
+                       
+                        <i class="bi bi-arrow-down-right" style="font-size: 2rem; color: white;"></i>
+                        <h3>Identidade Visual</h3>
+                        <p>Criamos identidades visuais coesas e memoráveis que comunicam sua marca de forma eficaz.</p>
+                       
+                        <button class="btn-section"> <i class="bi bi-arrow-right-circle" style="color: #17d4ff;"></i> Ver mais sobre identidade visual</button>
+                    </div>
+                    <div class="imagem"><img src="assets/cases (9).png"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="customCursor1">⟷</div>
+
+          <script>
+          const customCursor1 = document.getElementById("customCursor1");
+            const sliderContainer = document.getElementById("sliderContainer");
+            
+            document.addEventListener("mousemove", (e) => {
+                if (e.target.closest(".slider-container")) {
+                    customCursor1.style.display = "flex";
+                    customCursor1.style.left = `${e.pageX - 40}px`;
+                    customCursor1.style.top = `${e.pageY - 40}px`;
+                } else {
+                    customCursor1.style.display = "none";
+                }
+            });
+            </script>
+
+<script>
+    function enableDrag(sliderContainerId, sliderId) {
+        const sliderContainer = document.getElementById(sliderContainerId);
+        const slider = document.getElementById(sliderId);
+        let isDown = false;
+        let startX;
+        let currentIndex = 0;
+        const totalSlides = 3;
+    
+        // Função para atualizar a posição do slide
+        function updateSlidePosition() {
+            slider.style.transform = `translateX(${-currentIndex * 100}vw)`;
+        }
+    
+        sliderContainer.addEventListener("mousedown", (e) => {
+            isDown = true;
+            startX = e.pageX;
+        });
+    
+        sliderContainer.addEventListener("mouseup", (e) => {
+            if (!isDown) return;
+            isDown = false;
+            let moveX = e.pageX - startX;
+            if (moveX < -50 && currentIndex < totalSlides - 1) {
+                currentIndex++;
+            } else if (moveX > 50 && currentIndex > 0) {
+                currentIndex--;
+            }
+            updateSlidePosition();
+        });
+    
+        // Função de rotação automática a cada 3 segundos
+        setInterval(() => {
+            if (currentIndex < totalSlides - 1) {
+                currentIndex++;
+            } else {
+                currentIndex = 0; // Volta para o primeiro slide
+            }
+            updateSlidePosition();
+        }, 5000); // Troca a cada 3 segundos
+    }
+    
+    // Ativar o drag e a troca automática para cada slider
+    enableDrag("sliderContainer1", "slider1");
+    enableDrag("sliderContainer2", "slider2");
+    enableDrag("sliderContainer3", "slider3");
+    
+    </script>
+    
+   <!--Quarta Div-->
+   <br><br><br><br>
             <div class="cases-div">
                 <div class="cases-div-title">
-                  <h2>/ Alguns Cases da <span>Irlanda</span></h2>
+                    <hr id="hr">
+                    <br>
+                  <h2>/ Cases WebSite</h2>
                 </div>
                 <div class="cases-div-content">
                   <div class="cases-div-item">
                     <img src="assets/cases (1).png" alt="Imagem 1">
+                    <br>
+                    <br>
                     <h3>Rent a Fridge Trailer</h3>
                     <p>Projeto de site empresarial com integração de Google Search Engine (SEO).</p>
                     <button>Ver mais</button>
                   </div>
                   <div class="cases-div-item">
                     <img src="assets/cases (2).png" alt="Imagem 2">
+                    <br>
+                    <br>
                     <h3>Plastico Company</h3>
                     <p>Site internacional para venda de <br>Plastic Sheets.</p>
                     <button>Ver mais</button>
                   </div>
                   <div class="cases-div-item">
                     <img src="assets/cases (3).png" alt="Imagem 3">
+                    <br>
+                    <br>
                     <h3>Forja Works</h3>
                     <p>Projeto completo de marketing: gestão de mídias, websites e anúncios online.</p>
                     <button>Ver mais</button>
@@ -315,23 +574,20 @@ document.querySelectorAll('.dropdown-content').forEach(content => {
                 </div>
               </div>
               
-              <!--Quinta Div-->
-              
-
-
               <!--Sexta Div-->
               <div class="contato-rapido-div">
                 <div class="contato-rapido-div-branca">
                   
                   <!-- Parte esquerda -->
                   <div class="contato-rapido-div-esquerda">
-                    <h2>Quer um atendimento rápido?</h2>
+                    <h2>Ei, quer um <span style="color: rgb(255, 255, 255);">atendimento rápido?</span></h2>
                     <hr>
-                    <p>Preencha o formulário ao lado e te responderemos o mais breve possível!
-                        <br>
-                        Ou se preferir entre em contato pelo nosso <b>WhatsApp.</b>
+                    <p>Preencha o formulário ao lado e vamos falar sobre o seu negócio.
+                        <br><br>
+                        Ou se preferir entre em contato pelo nosso <b>WhatsApp</b> e ligue agora messmo. <br>
                     </p>
-                    <i class="icone">📞</i> <!-- Você pode substituir este ícone por um ícone de sua preferência -->
+                    <br>
+                    <a href="#"><i class="bi bi-whatsapp"></i></a>
                   </div>
               
                   <!-- Parte direita (formulário) -->
@@ -354,6 +610,132 @@ document.querySelectorAll('.dropdown-content').forEach(content => {
                   </div>
                 </div>
               </div>
+
+         
+        
+            <!-- Botão de rolar para cima -->
+            <div class="up-div" id="upDiv">
+                <i class="bi bi-arrow-up-short"></i>
+            </div>
+            <script>document.addEventListener("DOMContentLoaded", function () {
+                const upDiv = document.getElementById("upDiv");
+            
+                window.addEventListener("scroll", function () {
+                    const scrollPosition = window.scrollY;
+                    const halfPage = document.documentElement.scrollHeight / 2;
+            
+                    if (scrollPosition > halfPage) {
+                        upDiv.classList.add("show");
+                        upDiv.classList.remove("hide");
+                    } else {
+                        upDiv.classList.add("hide");
+                        upDiv.classList.remove("show");
+                    }
+                });
+            
+                upDiv.addEventListener("click", function () {
+                    window.scrollTo({
+                        top: 0,
+                        behavior: "smooth"
+                    });
+                });
+            });
+            </script>
+             <!-- Botão de whatsapp -->
+              <a href="https://wa.me/+5511989467375"  target="_blank" class="whatsapp-btn whatsapp-btn-interno">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" class="whatsapp-icon whatsapp-btn-interno" alt="WhatsApp">
+                WhatsApp
+            </a>
+            <script>
+                function whatsappShake() {
+                    let btn = document.querySelector(".whatsapp-btn");
+                    btn.style.animation = "whatsapp-shake 0.5s";
+                    setTimeout(() => { btn.style.animation = ""; }, 500);
+                }
+                setInterval(whatsappShake, 60000); // A cada 1 minuto (60.000 ms)
+            </script>
+        
+
+        <div class="avaliacoes">
+            <h2>O que os nossos clientes estão dizendo</h2>
+            <div class="avaliacoes-div">
+                <img src="assets/avaliação (1).png" alt="">
+                <img src="assets/avaliação (2).png" alt="">
+            </div>
+        </div>
+        <script>document.querySelectorAll(".avaliacoes-div img").forEach(img => {
+            img.addEventListener("click", function () {
+                let overlay = document.createElement("div");
+                overlay.classList.add("cs-fullscreen-overlay");
+        
+                let fullImage = document.createElement("img");
+                fullImage.classList.add("cs-fullscreen-image");
+                fullImage.src = this.src;
+        
+                overlay.appendChild(fullImage);
+                document.body.appendChild(overlay);
+        
+                setTimeout(() => {
+                    overlay.classList.add("active");
+                }, 10);
+        
+                overlay.addEventListener("click", function () {
+                    overlay.classList.remove("active");
+                    setTimeout(() => overlay.remove(), 300);
+                });
+            });
+        });
+        </script>
+
+              <footer class="footer">
+                <div class="footer-container">
+                    
+                    <!-- Primeira div (Logo e redes sociais) -->
+                    <div class="footer-logo">
+                        <img src="assets/logo-design.png" alt="Logo" class="footer-logo-img">
+                        <div class="footer-social">
+                            <a href="#"><i class="bi bi-instagram"></i></a>
+                            <a href="#"><i class="bi bi-facebook"></i></a>
+                            <a href="#"><i class="bi bi-linkedin"></i></a>
+                            <a href="#"><i class="bi bi-whatsapp"></i></a>
+                        </div>
+                    </div>
+        
+                 
+                    <!-- Terceira div (Título e Parágrafo) -->
+                    <div class="footer-text">
+                        <h2>O que fazemos</h2>
+                        <p>Somos uma agência de marketing focada em escalar resultados para o seu projeto: seja ele digital ou físico. <br>
+                            Criamos sites, desenvolvemos suas redes sociais, criamos anúncios online e outras soluções para marcas de todos os tamanhos.</p>
+                    </div>
+        
+                    <!-- Quarta div (Soluções) -->
+                    <div class="footer-solutions">
+                        <h2>Soluções</h2>
+                        <ul>
+                            <li><a href="#">Anúncios Online</a></li>
+                            <li><a href="#">Gestão de Mídias</a></li>
+                            <li><a href="#">Branding</a></li>
+                            <li><a href="#">Funil de Vendas</a></li>
+                            <li><a href="#">Desenvolvimento Web</a></li>
+                            <li><a href="#">Filmmaker</a></li>
+                        </ul>
+                    </div>
+        
+                    <!-- Quinta div (GGDigital) -->
+                    <div class="footer-ggdigital">
+                        <h2>GGDigital</h2>
+                        <ul>
+                            <li><a href="#">Sobre</a></li>
+                            <li><a href="#">Contato</a></li>
+                            <li><a href="#">Cases</a></li>
+                            <li><a href="#">Portifolio</a></li>
+                            <li><a href="#">Sites Irlandeses</a></li>
+                        </ul>
+                    </div>
+        
+                </div>
+            </footer>
               
           <!-- Script do efeito de digitação -->
           <script>
