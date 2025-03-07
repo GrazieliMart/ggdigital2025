@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>GGDIGITAL | Agência de Marketing Especializado I Especialistas em anúncios online, gestão de mídias e criação de sites para negócios que querem crescer no digital.</title>
+        <link rel="stylesheet" href="css/navbar.css">
+        <link rel="stylesheet" href="css/index.css">
+        <link rel="stylesheet" href="css/contato.css">
+        <meta name="description" content="A GGDIGITAL é uma agência especializada em anúncios online, gestão de mídias e criação de websites e landing pages para empresas que querem crescer no digital.">
+        <meta name="keywords" content="GGDIGITAL, marketing digital, anúncios online, Google Ads, gestão de mídias, social media, criação de sites, landing pages, tráfego pago, branding">
+        <meta name="author" content="GGDIGITAL">
+        <meta name="robots" content="index, follow">
+        <meta name="googlebot" content="index, follow">
+        <meta name="bingbot" content="index, follow">
+        <meta name="yandex" content="index, follow">
+        <meta name="duckduckbot" content="index, follow">
+        
+        <!-- Open Graph (para redes sociais) -->
+        <meta property="og:title" content="GGDIGITAL | Agência de Marketing Especializado">
+        <meta property="og:description" content="Especialistas em anúncios online, gestão de mídias e criação de sites para negócios que querem crescer no digital.">
+        <meta property="og:image" content="assets/logo-completa.png">
+        <meta property="og:url" content="https://marketinggdigital.com/">
+        <meta property="og:type" content="website"> 
+    
+        <!-- Links e estilos -->
+        <link rel="stylesheet" href="css.css">
+        <link rel="shortcut icon" href="assets/favicon.png" type="image/x-icon">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.min.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        <style>
+          
+        </style>
+    </head>
+<body>
+          <!-- Tela de idiomas em fullscreen -->
+          <div class="navbar-class">
+            <div class="navbar-class-top">
+                <p>Mais de <b>3 anos</b> ajudando empresas a <b>escalar vendas</b> no meio digital.</p>
+            </div>
+            <div class="navbar-class-container">
+                <a href="index.html"><div class="navbar-class-logo">
+                    <img src="assets/logo-design.png" alt="Logo">
+                    <img src="assets/logo-digital-branca.png" alt="Logo Hover"id="img-hover">
+                </div></a>
+                <div class="navbar-class-links">
+                    <a href="index.html" >Home</a>
+                    <a href="sobre.html" >Sobre</a>
+                    <a href="solucoes.html" class="dropdown-trigger" id="solucoes-trigger">Soluções  <i class="bi bi-chevron-down"></i></a>
+                    <a href="cases.html" class="dropdown-trigger" id="cases-trigger">Cases</a>
+                    <a href="portifolio.html" class="dropdown-trigger" id="cases-trigger">Portifólio</a>
+                    <a href="sites.html" class="dropdown-trigger" id="cases-trigger1">Sites</a>
+                </div>
+                
+                <div class="dropdown-menu" id="solucoes-menu">
+                    <div class="dropdown-content">
+                       <a href="anuncios-online.html"><div class="dropdown-item">
+                            <img src="assets/navbar-drop (1).png" alt="Icon">
+                            <div>
+                                <h2>Anúncios Online</h2>
+                                <p>Mais clientes no seu site <br> ou comércio.</p>
+                            </div>
+                        </div></a> 
+                        <a href="gestao-de-midias.html"><div class="dropdown-item">
+                            <img src="assets/navbar-drop (2).png" alt="Icon">
+                            <div>
+                                <h2>Gestão de mídias</h2>
+                                <p>Autoridade e presença nas <br>redes sociais.</p>
+                            </div>
+                        </div></a>
+                       <a href="desenvolvimento-web.html"><div class="dropdown-item">
+                            <img src="assets/navbar-drop (3).png" alt="Icon">
+                            <div>
+                                <h2>Desenvolvimento Web</h2>
+                                <p>Sites e Apps: soluções <br> personalizadas para você.</p>
+                            </div>
+                        </div></a>  
+                        
+                      <a href="branding.html"> <div class="dropdown-item">
+                            <img src="assets/navbar-drop (4).png" alt="Icon">
+                            <div>
+                                <h2>Branding</h2>
+                                <p>Crie ou remodele sua <br>identidade visual.</p>
+                            </div>
+                        </div></a> 
+                       <a href="funil-de-vendas.html"> <div class="dropdown-item">
+                            <img src="assets/navbar-drop (5).png" alt="Icon">
+                            <div>
+                                <h2>Funil de vendas</h2>
+                                <p>Tenha maior domínio das <br>suas vendas.</p>
+                            </div>
+                        </div></a>
+                       <a href="filmmaker.html"><div class="dropdown-item">
+                            <img src="assets/navbar-drop (6).png" alt="Icon">
+                            <div>
+                                <h2>Filmmaker</h2>
+                                <p>Tenha uma gravação profissional <br> do seu negócio.</p>
+                            </div>
+                        </div></a> 
+                        
+                    </div>
+                    
+                </div>
+                
+             <script>let lastScrollTop = 0; // Para controlar a direção da rolagem
+                const navbar = document.querySelector('.navbar-class');
+                
+                window.addEventListener('scroll', function() {
+                  let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+                
+                  // Se estiver rolando para baixo
+                  if (currentScroll > lastScrollTop) {
+                    navbar.classList.add('navbar-hidden'); // Esconde a navbar
+                  } else {
+                    navbar.classList.remove('navbar-hidden'); // Mostra a navbar
+                  }
+                
+                  // Atualiza a posição do scroll
+                  lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // Evita valores negativos
+                });
+                </script>
+                
+                <script>
+ document.querySelectorAll('.dropdown-trigger').forEach(trigger => {
+    trigger.addEventListener('mouseover', (e) => {
+        const menuId = e.target.id === 'solucoes-trigger' ? '#solucoes-menu' : '#cases-menu';
+        document.querySelector(menuId).style.display = 'flex';
+        e.target.classList.add('active'); // Adiciona a classe 'active' para o link (cor de hover)
+    });
+
+    trigger.addEventListener('mouseleave', (e) => {
+        const menuId = e.target.id === 'solucoes-trigger' ? '#solucoes-menu' : '#cases-menu';
+        setTimeout(() => {
+            if (!document.querySelector(menuId).matches(':hover')) {
+                document.querySelector(menuId).style.display = 'none';
+                e.target.classList.remove('active'); // Remove a classe 'active' quando o mouse sai (volta ao estado normal)
+            }
+        }, 200);
+    });
+});
+
+// Fechar o menu ao clicar fora ou sair do conteúdo do dropdown
+document.addEventListener('click', (e) => {
+    const dropdowns = document.querySelectorAll('.dropdown-menu');
+    const triggers = document.querySelectorAll('.dropdown-trigger');
+
+    let clickedInsideDropdown = false;
+    dropdowns.forEach(menu => {
+        if (menu.contains(e.target)) {
+            clickedInsideDropdown = true;
+        }
+    });
+
+    let clickedInsideTrigger = false;
+    triggers.forEach(trigger => {
+        if (trigger.contains(e.target)) {
+            clickedInsideTrigger = true;
+        }
+    });
+
+    // Se o clique for fora do menu e do trigger, fecha o menu e remove a classe 'active' do link
+    if (!clickedInsideDropdown && !clickedInsideTrigger) {
+        dropdowns.forEach(menu => {
+            menu.style.display = 'none';
+            menu.previousElementSibling.classList.remove('active'); // Remove a classe 'active' no link (volta ao normal)
+        });
+    }
+});
+
+// Fechar o menu quando o mouse sair do 'dropdown-content'
+document.querySelectorAll('.dropdown-content').forEach(content => {
+    content.addEventListener('mouseleave', () => {
+        const menu = content.closest('.dropdown-menu');
+        setTimeout(() => {
+            if (!menu.matches(':hover')) {
+                menu.style.display = 'none'; // Fecha o menu quando o mouse sair do conteúdo
+                menu.previousElementSibling.classList.remove('active'); // Remove a classe 'active' no link (volta ao normal)
+            }
+        }, 200);
+    });
+});
+
+                </script>
+                             
+                <div class="navbar-class-button">
+                  <a href="contato.html"><button>Fale com a GG</button></a>  
+                   
+                </div>
+                <!-- Adicionando o botão de idioma -->
+                <div class="navbar-class-lang">
+                    <button onclick="toggleLangMenu()">
+                        <img src="assets/brazil_flag.png" alt="Bandeira do Brasil">
+                        <i class="bi bi-chevron-down"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="navbar-class-mobile">
+                <img src="assets/logo-branca-gg.png" alt="">
+                <button id="menuButton" onclick="toggleMobileMenu()">
+                    <i class="bi bi-three-dots"></i>            </button>
+            </div>
+            <div class="navbar-class-mobile-menu" id="mobileMenu">
+                <a href="index.html" >Home</a>
+                    <a href="sobre.html" >Sobre</a>
+                    <a href="cases.html" class="dropdown-trigger" id="cases-trigger">Cases</a>
+                    <a href="portifolio.html" class="dropdown-trigger" id="cases-trigger">Portifólio</a>
+                    <a href="sites.html" class="dropdown-trigger" id="cases-trigger1">Sites</a>
+                    <a href="contato.html" class="dropdown-trigger" id="cases-trigger1">Fale com a GG</a>
+                <div class="navbar-class-lang">
+                    <button onclick="toggleLangMenu()">
+                        <img src="assets/brazil_flag.png" alt="Bandeira do Brasil">
+                        <i class="bi bi-chevron-down"></i>
+                    </button>
+                </div>
+                <button onclick="toggleMobileMenu()" id="close"><i class="bi bi-x"></i></button>
+            </div>
+        </div>
+        <div class="navbar-class-fullscreen" id="fullscreenLang" onclick="closeOnOutsideClick(event)">
+            <span class="close" onclick="toggleLangMenu()">&times;</span>
+            <p class="selected">Portuguese</p>
+            <p>English</p>
+        </div>
+      
+      
+        <div class="contato">
+            <!-- Bolinhas animadas -->
+            <div class="ball" id="ball1"></div>
+            <div class="ball" id="ball2"></div>
+           <div class="contato-direita">
+                <img src="assets/contato-img.png" alt="Imagem de contato" id="contato-img">
+            </div>
+            <div class="contato-esquerda">
+                <h3>Vamos conversar.</h3>
+                <p>Para conversar conosco, é <b>simples</b> e <b>rápido!</b><br><br>
+        
+                    Você pode falar pelo Whatsapp: <a href="https://wa.me/5511989467375" id="blue" target="_blank">11 98946-7375</a></b> ou se preferir falar sobre sua ideia/projeto, preencha o nosso formulário.
+                </p>
+                <br>
+                <form class="contato-formulario">
+                    <input type="text" placeholder="Nome" required>
+                    <input type="email" placeholder="E-mail" required>
+                    <input type="email" placeholder="(DDD) + Telefone" required>
+                    <textarea placeholder="Conte qual o serviço desejado e um pouco sobre o seu projeto." required></textarea>
+                    <br><br>
+                    <button type="submit">Enviar</button>
+                </form>
+                <br>
+                <p><b>Email:</b> contato@marketinggdigital.com</p>
+                <div class="contato-redes">
+                    <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+         
+        </div>
+        
+    
+        
+        <script>
+                const contato = document.querySelector(".contato");
+    const ball1 = document.getElementById("ball1");
+    const ball2 = document.getElementById("ball2");
+    const contatoImg = document.getElementById("contato-img");
+
+    // Efeito de movimento das bolinhas
+    contato.addEventListener("mousemove", (event) => {
+        const rect = contato.getBoundingClientRect();
+        const x = event.clientX - rect.left;
+        const y = event.clientY - rect.top;
+
+        ball1.style.transform = `translate(${x - 150}px, ${y - 150}px)`;  /* Ajusta para que a bolinha siga o mouse */
+        ball2.style.transform = `translate(${x - 180}px, ${y - 180}px)`;  /* Um pouco mais distante para o efeito de rastro */
+
+        ball1.style.filter = `blur(${Math.min(40 + (x + y) / 40, 80)}px)`; /* Aumento dinâmico do blur */
+        ball2.style.filter = `blur(${Math.min(40 + (x + y) / 40, 80)}px)`; /* Aumento dinâmico do blur */
+    });
+
+    // Efeito de subir ou descer a imagem ao rolar
+    window.addEventListener("scroll", () => {
+        const scrollY = window.scrollY; // Pegando a posição do scroll vertical
+        const scrollValue = scrollY * 0.3; // Controlando a intensidade do efeito
+
+        // Movendo a imagem para cima ou para baixo conforme o scroll
+        contatoImg.style.transform = `translateY(${scrollValue}px)`;
+    });
+        </script>
+        
+
+<footer class="footer">
+    <div class="footer-container">
+        <!-- Primeira div (Logo e redes sociais) -->
+        <div class="footer-logo">
+            <img src="assets/logo-design.png" alt="Logo" class="footer-logo-img">
+            <div class="footer-social">
+                <a href="#"><i class="bi bi-instagram"></i></a>
+                <a href="#"><i class="bi bi-facebook"></i></a>
+                <a href="#"><i class="bi bi-linkedin"></i></a>
+                <a href="#"><i class="bi bi-whatsapp"></i></a>
+            </div>
+        </div>
+
+        <!-- Terceira div (Título e Parágrafo) -->
+        <div class="footer-text">
+            <h2>O que fazemos</h2>
+            <p>Somos uma agência de marketing focada em escalar resultados para o seu projeto: seja ele digital ou físico. <br>
+                Criamos sites, desenvolvemos suas redes sociais, criamos anúncios online e outras soluções para marcas de todos os tamanhos.</p>
+        </div>
+
+        <!-- Quarta div (Soluções) -->
+        <div class="footer-solutions">
+            <h2>Soluções</h2>
+            <ul>
+                <li><a href="anuncios-online.html">Anúncios Online</a></li>
+                <li><a href="gestao-de-midias.html">Gestão de Mídias</a></li>
+                <li><a href="desenvolvimento-web.html">Desenvolvimento Web</a></li>
+                <li><a href="branding.html">Branding</a></li>
+                <li><a href="funil-de-vendas.html">Funil de Vendas</a></li>
+                <li><a href="filmmaker.html">Filmmaker</a></li>
+            </ul>
+        </div>
+
+        <!-- Quinta div (Links de navegação) -->
+        <div class="footer-links">
+            <h2>Links</h2>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="solucoes.html">Soluções</a></li>
+                <li><a href="cases.html">Cases</a></li>
+                <li><a href="portifolio.html">Portifólio</a></li>
+                <li><a href="sites.html">Sites</a></li>
+                <li><a href="contato.html">Fale com a GG</a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.min.js"></script>
+<script src="scripts.js"></script>  
+<script>document.querySelector('.navbar-class-mobile button').addEventListener('click', function() {
+  const menu = document.querySelector('.navbar-class-mobile-menu');
+  menu.classList.toggle('active');  // Alterna a classe active para abrir/fechar o menu
+  const menuButton = document.querySelector('#menuButton');
+  menuButton.classList.toggle('rotated');  // Opcional: rotaciona o ícone de abrir/fechar
+});
+</script>
+<script>
+  document.querySelector('.navbar-class-mobile button').addEventListener('click', function() {
+      const menu = document.querySelector('.navbar-class-mobile-menu');
+      menu.classList.toggle('active');  // Alterna a classe active para abrir/fechar o menu
+      const menuButton = document.querySelector('#menuButton');
+      menuButton.classList.toggle('rotated');  // Opcional: rotaciona o ícone de abrir/fechar
+  });
+
+  // Adicionando a funcionalidade de fechar o menu ao clicar no ícone de "X"
+  document.querySelector('#close').addEventListener('click', function() {
+      const menu = document.querySelector('.navbar-class-mobile-menu');
+      menu.classList.remove('active');  // Remove a classe active para fechar o menu
+      const menuButton = document.querySelector('#menuButton');
+      menuButton.classList.remove('rotated');  // Opcional: desfaz a rotação do ícone de abrir/fechar
+  });
+</script>     
+      <script>
+      function toggleLangMenu() {
+          document.getElementById("fullscreenLang").classList.toggle("active");
+      }
+      
+      function closeOnOutsideClick(event) {
+          const fullscreenDiv = document.getElementById("fullscreenLang");
+          
+          // Verifica se o clique foi fora do conteúdo interno (span e p)
+          if (event.target === fullscreenDiv) {
+              toggleLangMenu();
+          }
+      }
+      </script>
+      
+</body>
+</html>

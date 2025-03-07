@@ -103,9 +103,7 @@ font-weight: 700;
     width: 50px;
     transition: opacity 0.2s;
 }
-.navbar-class-logo img:hover {
-    
-}
+
 .navbar-class-logo img:last-child {
     /* position: absolute; */
     opacity: 0;

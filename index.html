@@ -41,61 +41,64 @@
                 <p>Mais de <b>3 anos</b> ajudando empresas a <b>escalar vendas</b> no meio digital.</p>
             </div>
             <div class="navbar-class-container">
-                <div class="navbar-class-logo">
+                <a href="index.html"><div class="navbar-class-logo">
                     <img src="assets/logo-design.png" alt="Logo">
                     <img src="assets/logo-digital-branca.png" alt="Logo Hover"id="img-hover">
-                </div>
+                </div></a>
                 <div class="navbar-class-links">
-                    <a href="#" >Sobre</a>
-                    <a href="#" class="dropdown-trigger" id="solucoes-trigger">Soluções  <i class="bi bi-chevron-down"></i></a>
-                    <a href="#" class="dropdown-trigger" id="cases-trigger">Cases</a>
-                    <a href="#" class="dropdown-trigger" id="cases-trigger">Portifólio</a>
-                    <a href="#" class="dropdown-trigger" id="cases-trigger1">Sites Irlandeses</a>
+                    <a href="index.html" >Home</a>
+                    <a href="sobre.html" >Sobre</a>
+                    <a href="solucoes.html" class="dropdown-trigger" id="solucoes-trigger">Soluções  <i class="bi bi-chevron-down"></i></a>
+                    <a href="cases.html" class="dropdown-trigger" id="cases-trigger">Cases</a>
+                    <a href="portifolio.html" class="dropdown-trigger" id="cases-trigger">Portifólio</a>
+                    <a href="sites.html" class="dropdown-trigger" id="cases-trigger1">Sites</a>
                 </div>
                 
                 <div class="dropdown-menu" id="solucoes-menu">
                     <div class="dropdown-content">
-                        <div class="dropdown-item">
+                       <a href="anuncios-online.html"><div class="dropdown-item">
                             <img src="assets/navbar-drop (1).png" alt="Icon">
                             <div>
                                 <h2>Anúncios Online</h2>
                                 <p>Mais clientes no seu site <br> ou comércio.</p>
                             </div>
-                        </div>
-                        <div class="dropdown-item">
+                        </div></a> 
+                        <a href="gestao-de-midias.html"><div class="dropdown-item">
                             <img src="assets/navbar-drop (2).png" alt="Icon">
                             <div>
                                 <h2>Gestão de mídias</h2>
                                 <p>Autoridade e presença nas <br>redes sociais.</p>
                             </div>
-                        </div>
-                        <div class="dropdown-item">
+                        </div></a>
+                       <a href="desenvolvimento-web.html"><div class="dropdown-item">
                             <img src="assets/navbar-drop (3).png" alt="Icon">
                             <div>
                                 <h2>Desenvolvimento Web</h2>
                                 <p>Sites e Apps: soluções <br> personalizadas para você.</p>
                             </div>
-                        </div> <div class="dropdown-item">
+                        </div></a>  
+                        
+                      <a href="branding.html"> <div class="dropdown-item">
                             <img src="assets/navbar-drop (4).png" alt="Icon">
                             <div>
                                 <h2>Branding</h2>
                                 <p>Crie ou remodele sua <br>identidade visual.</p>
                             </div>
-                        </div>
-                        <div class="dropdown-item">
+                        </div></a> 
+                       <a href="funil-de-vendas.html"> <div class="dropdown-item">
                             <img src="assets/navbar-drop (5).png" alt="Icon">
                             <div>
                                 <h2>Funil de vendas</h2>
                                 <p>Tenha maior domínio das <br>suas vendas.</p>
                             </div>
-                        </div>
-                        <div class="dropdown-item">
+                        </div></a>
+                       <a href="filmmaker.html"><div class="dropdown-item">
                             <img src="assets/navbar-drop (6).png" alt="Icon">
                             <div>
                                 <h2>Filmmaker</h2>
                                 <p>Tenha uma gravação profissional <br> do seu negócio.</p>
                             </div>
-                        </div>
+                        </div></a> 
                         
                     </div>
                     
@@ -182,7 +185,7 @@ document.querySelectorAll('.dropdown-content').forEach(content => {
                 </script>
                              
                 <div class="navbar-class-button">
-                    <button>Fale com a GG</button>
+                   <a href="contato.html"><button>Fale com a GG</button></a> 
                    
                 </div>
                 <!-- Adicionando o botão de idioma -->
@@ -199,9 +202,12 @@ document.querySelectorAll('.dropdown-content').forEach(content => {
                     <i class="bi bi-three-dots"></i>            </button>
             </div>
             <div class="navbar-class-mobile-menu" id="mobileMenu">
-                <a href="#">sobre</a>
-                <a href="#">soluções</a>
-                <a href="#">cases</a>
+                <a href="index.html" >Home</a>
+                    <a href="sobre.html" >Sobre</a>
+                    <a href="cases.html" class="dropdown-trigger" id="cases-trigger">Cases</a>
+                    <a href="portifolio.html" class="dropdown-trigger" id="cases-trigger">Portifólio</a>
+                    <a href="sites.html" class="dropdown-trigger" id="cases-trigger1">Sites</a>
+                    <a href="contato.html" class="dropdown-trigger" id="cases-trigger1">Fale com a GG</a>
                 <div class="navbar-class-lang">
                     <button onclick="toggleLangMenu()">
                         <img src="assets/brazil_flag.png" alt="Bandeira do Brasil">
@@ -473,22 +479,29 @@ document.querySelectorAll('.dropdown-content').forEach(content => {
 </div>
 
 <div id="customCursor1">⟷</div>
+<script>
+    const sliderElement = document.querySelector(".container1");
+    const cursor1 = document.getElementById("customCursor1");
 
-          <script>
-          const customCursor1 = document.getElementById("customCursor1");
-            const sliderContainer = document.getElementById("sliderContainer");
-            
-            document.addEventListener("mousemove", (e) => {
-                if (e.target.closest(".slider-container")) {
-                    customCursor1.style.display = "flex";
-                    customCursor1.style.left = `${e.pageX - 40}px`;
-                    customCursor1.style.top = `${e.pageY - 40}px`;
-                } else {
-                    customCursor1.style.display = "none";
-                }
-            });
-            </script>
+    if (sliderElement && cursor1) {
+        sliderElement.addEventListener("mouseenter", () => {
+            cursor1.style.opacity = "1"; // Garante que reaparece
+            cursor1.style.transform = "scale(1)"; // Volta ao tamanho normal
+            cursor1.style.display = "flex"; // Mostra o cursor
+        });
 
+        sliderElement.addEventListener("mouseleave", () => {
+            cursor1.style.display = "none"; // Esconde ao sair
+        });
+
+        sliderElement.addEventListener("mousemove", (e) => {
+            cursor1.style.left = e.pageX - 40 + "px"; // Centraliza
+            cursor1.style.top = e.pageY - 40 + "px";
+        });
+
+       
+    }
+</script>
 <script>
     function enableDrag(sliderContainerId, sliderId) {
         const sliderContainer = document.getElementById(sliderContainerId);
@@ -687,55 +700,55 @@ document.querySelectorAll('.dropdown-content').forEach(content => {
         });
         </script>
 
-              <footer class="footer">
-                <div class="footer-container">
-                    
-                    <!-- Primeira div (Logo e redes sociais) -->
-                    <div class="footer-logo">
-                        <img src="assets/logo-design.png" alt="Logo" class="footer-logo-img">
-                        <div class="footer-social">
-                            <a href="#"><i class="bi bi-instagram"></i></a>
-                            <a href="#"><i class="bi bi-facebook"></i></a>
-                            <a href="#"><i class="bi bi-linkedin"></i></a>
-                            <a href="#"><i class="bi bi-whatsapp"></i></a>
-                        </div>
-                    </div>
-        
-                 
-                    <!-- Terceira div (Título e Parágrafo) -->
-                    <div class="footer-text">
-                        <h2>O que fazemos</h2>
-                        <p>Somos uma agência de marketing focada em escalar resultados para o seu projeto: seja ele digital ou físico. <br>
-                            Criamos sites, desenvolvemos suas redes sociais, criamos anúncios online e outras soluções para marcas de todos os tamanhos.</p>
-                    </div>
-        
-                    <!-- Quarta div (Soluções) -->
-                    <div class="footer-solutions">
-                        <h2>Soluções</h2>
-                        <ul>
-                            <li><a href="#">Anúncios Online</a></li>
-                            <li><a href="#">Gestão de Mídias</a></li>
-                            <li><a href="#">Branding</a></li>
-                            <li><a href="#">Funil de Vendas</a></li>
-                            <li><a href="#">Desenvolvimento Web</a></li>
-                            <li><a href="#">Filmmaker</a></li>
-                        </ul>
-                    </div>
-        
-                    <!-- Quinta div (GGDigital) -->
-                    <div class="footer-ggdigital">
-                        <h2>GGDigital</h2>
-                        <ul>
-                            <li><a href="#">Sobre</a></li>
-                            <li><a href="#">Contato</a></li>
-                            <li><a href="#">Cases</a></li>
-                            <li><a href="#">Portifolio</a></li>
-                            <li><a href="#">Sites Irlandeses</a></li>
-                        </ul>
-                    </div>
-        
-                </div>
-            </footer>
+<footer class="footer">
+    <div class="footer-container">
+        <!-- Primeira div (Logo e redes sociais) -->
+        <div class="footer-logo">
+            <img src="assets/logo-design.png" alt="Logo" class="footer-logo-img">
+            <div class="footer-social">
+                <a href="#"><i class="bi bi-instagram"></i></a>
+                <a href="#"><i class="bi bi-facebook"></i></a>
+                <a href="#"><i class="bi bi-linkedin"></i></a>
+                <a href="#"><i class="bi bi-whatsapp"></i></a>
+            </div>
+        </div>
+
+        <!-- Terceira div (Título e Parágrafo) -->
+        <div class="footer-text">
+            <h2>O que fazemos</h2>
+            <p>Somos uma agência de marketing focada em escalar resultados para o seu projeto: seja ele digital ou físico. <br>
+                Criamos sites, desenvolvemos suas redes sociais, criamos anúncios online e outras soluções para marcas de todos os tamanhos.</p>
+        </div>
+
+        <!-- Quarta div (Soluções) -->
+        <div class="footer-solutions">
+            <h2>Soluções</h2>
+            <ul>
+                <li><a href="anuncios-online.html">Anúncios Online</a></li>
+                <li><a href="gestao-de-midias.html">Gestão de Mídias</a></li>
+                <li><a href="desenvolvimento-web.html">Desenvolvimento Web</a></li>
+                <li><a href="branding.html">Branding</a></li>
+                <li><a href="funil-de-vendas.html">Funil de Vendas</a></li>
+                <li><a href="filmmaker.html">Filmmaker</a></li>
+            </ul>
+        </div>
+
+        <!-- Quinta div (Links de navegação) -->
+        <div class="footer-links">
+            <h2>Links</h2>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="solucoes.html">Soluções</a></li>
+                <li><a href="cases.html">Cases</a></li>
+                <li><a href="portifolio.html">Portifólio</a></li>
+                <li><a href="sites.html">Sites</a></li>
+                <li><a href="contato.html">Fale com a GG</a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+
               
           <!-- Script do efeito de digitação -->
           <script>
